@@ -32,14 +32,24 @@ html,
 
 }
 .container {
+    --size:8;
     height: 700px;
     border-radius: 3px;
     width: 700px;
     background-color: black;
     margin-right:30px;
     margin-left: 30px;
-    display: grid;a
+    display: grid;
+    grid-template-columns: repeat(var(--size), 1fr);
+    grid-template-rows: repeat(var(--size), 1fr);
+    gap: 3px;
 
+}
+
+.promt {
+    color: red;
+    display: flex;
+    justify-content: center;
 }
 
 .reset-btn {
@@ -50,4 +60,8 @@ html,
 input{
     height: 30px;
     width: 100px;
+}
+.box {
+    background-color: rgb(154, 152, 152);
+    border-radius: 2px;
 }
