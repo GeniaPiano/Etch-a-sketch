@@ -37,12 +37,15 @@ window.addEventListener("mouseup", () => {
 resetBtn.addEventListener("click", () => {
     container.innerHTML = "";
     setSize(size);
+    promptDiv.innerHTML = ""
 });
 
 sizeElement.addEventListener("keyup", () =>{
     size = sizeElement.value
     if(size>=2 && size <=50) {
-    setSize (size);  }
+    setSize (size); 
+    promptDiv.innerHTML = ""
+ }
     else { 
      promptDiv.innerHTML = "Set the number from 2 to 50!"
     }   
